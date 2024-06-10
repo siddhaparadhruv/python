@@ -23,9 +23,5 @@ print("hi")
 start(16)
 print("+++++++++++++++++")
 
-def start1():
-    f=5
-    for i in range(5):
-        if 0<f:
-            print(2*f)
+
 

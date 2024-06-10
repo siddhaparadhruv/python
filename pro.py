@@ -36,9 +36,9 @@ while(True):
                 print("========================")
                 e=(input("enter your email = "))
                 for i in alist:
-                    if(i['username']==z and i['password']==e):
+                    if(i['username']==z and i['password']==e):  
                         flag=1
-                        print("found") 
+                        print("*** login successfully ***") 
                         while(True):
                             print("|--------------------------|")
                             print("|1. add Qestion            |")
@@ -105,7 +105,7 @@ while(True):
                                         if op5==op1 or op5==op2 or op5==op3 or op5==op4:
                                             print("right answer")
                                             print("hi")
-                                            i["op"]=[op1,op2,op3,op4,op5]                                             
+                                            i["op"]=[op1,op2,op3,op4,op5]
                                         else:
                                             print("not posibal")                                
                                 if fleg1!=1:
@@ -115,11 +115,11 @@ while(True):
                                 print(blist)
                             elif ch==5:
                                 fla=0
-                                print(fq)
-                                print(op1)
-                                print(op2)
-                                print(op3)
-                                print(op4)
+                                print(blist[0]['que'])
+                                print(blist[0]['op'])
+                                #print(blist[0['op[1]']])
+                                #print(blist[0['op[2]']])
+                                #print(blist[0['op[3]']])
                                 ans=(input("enter the right answer = "))
                                 for i in clist:
                                     if(op5==ans):
@@ -132,7 +132,7 @@ while(True):
                             else:
                                 print("invalid")
                 if flag != 1:
-                    print("not found")
+                    print("not login")
             elif(c==0):
                 break
             else:
@@ -173,7 +173,7 @@ while(True):
                 for i in clist:
                     if(i['username']==z and i['password']==e):
                         flag=1  
-                        print("*** found ***") 
+                        print("*** login successfully ***") 
                         for i in blist:
                             print(i['que'])
                             for j in range(len(i['op'])-1):
@@ -182,7 +182,7 @@ while(True):
                             if i["op"][4]==answer:
                                 c3=c3+1
                 if flag != 1:
-                    print("--- not found ---")
+                    print("--- not login ---")
                 print(c3,"/",len(blist))                            
             elif(Q==0):
                 break
